@@ -1,4 +1,4 @@
-// 🔹 Grid Function
+// Grid Function
 function grid() {
   const dfs = function (grid, k, i, counter) {
     if (grid?.[k]?.[i] !== '1') return;
@@ -30,10 +30,10 @@ function grid() {
   ];
 
   const result = numIslands(gridData);
-  document.getElementById('gridOutput').innerText = `Number of islands: ${result}`;
+  console.log('Grid Function = ' + result)
 }
 
-// 🔹 Points Function
+// Points Function
 function points() {
   const minTimeToVisitAllPoints = (points) => {
     let times = 0;
@@ -47,11 +47,9 @@ function points() {
 
   const pointsData = [[1, 1], [3, 4], [-1, 0]];
   const result = minTimeToVisitAllPoints(pointsData);
-  document.getElementById("pointsOutput").innerText = `Minimum time: ${result}`;
+  console.log('Points Function = ' + result)
 }
 
-// 🔹 Call both on page load
-document.addEventListener("DOMContentLoaded", () => {
+// Call both on page load
   grid();
   points();
-});
