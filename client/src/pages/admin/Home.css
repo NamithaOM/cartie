@@ -1,0 +1,46 @@
+.home-container {
+  margin-top: 100px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  height: 150px;
+}
+
+.moving-text {
+  display: inline-block;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #2c3e50;
+  white-space: nowrap;
+  animation: slideLeftRight 10s linear infinite;
+}
+
+.user-greeting {
+  margin-top: 30px;
+  font-size: 1.8rem;
+  color: #27ae60;
+  animation: fadeIn 2s ease-in;
+}
+
+@keyframes slideLeftRight {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(20%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
